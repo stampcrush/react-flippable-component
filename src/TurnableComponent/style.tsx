@@ -6,13 +6,6 @@ interface StyledProps {
   $isClickable: boolean;
 }
 
-export const Layout = styled.div`
-  display: flex;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-`;
-
 export const Container = styled.div<StyledProps>`
   display: flex;
   position: relative;

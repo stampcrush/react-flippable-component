@@ -1,10 +1,10 @@
 import { MouseEvent, PropsWithChildren, useEffect, useState } from 'react';
-import { BackImage, Container, Wrapper, FrontImage, Layout } from './style';
+import { BackImage, Container, Wrapper, FrontImage } from './style';
 
 export interface TurnableComponentProps {
   frontImageUrl: string;
   backImageUrl: string;
-  isShown?: boolean;
+  isFirstTurned?: boolean;
   width?: number;
   height?: number;
   isClickable?: boolean;
@@ -13,7 +13,7 @@ export interface TurnableComponentProps {
 const TurnableComponent = ({
   frontImageUrl,
   backImageUrl,
-  isShown = true,
+  isFirstTurned = true,
   width = 270,
   height = 150,
   isClickable = false,
@@ -23,17 +23,17 @@ const TurnableComponent = ({
 
   useEffect(() => {
     if (!isClickable) {
-      if (isShown) {
+      if (isFirstTurned) {
         setTimeout(() => {
           setIsTurned(true);
         }, 100);
       }
 
-      if (!isShown) {
+      if (!isFirstTurned) {
         setIsTurned(false);
       }
     }
-  }, [isShown]);
+  }, [isFirstTurned]);
 
   const turn = (e: MouseEvent<HTMLDivElement>) => {
     if (isClickable) setIsTurned(!isTurned);
