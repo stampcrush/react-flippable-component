@@ -20,8 +20,6 @@
     "kangyeongmin"
   ],
   "main": "build/index.js",
-  "module": "build/index.js",
-  "types:": "build/index.d.ts",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
