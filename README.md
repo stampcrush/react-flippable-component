@@ -1,1 +1,1 @@
-# react-flippable-component
+# react-turnable-component
