@@ -1,2 +1,1 @@
-import TurnableComponent from './TurnableComponent';
-export { TurnableComponent };
+export { default as TurnableComponent } from './TurnableComponent';
