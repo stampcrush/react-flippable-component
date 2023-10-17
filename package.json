@@ -22,7 +22,6 @@
   "main": "build/index.js",
   "module": "build/index.js",
   "types:": "build/index.d.ts",
-  "type": "module",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -42,7 +41,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tsc && cp package.json ./build",
+    "build": "rm -rf build && tsc && cp package.json README.md ./build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
