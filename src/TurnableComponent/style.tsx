@@ -53,11 +53,9 @@ export const CouponImage = styled.img`
 
 export const FrontImage = styled(CouponImage)`
   z-index: 10;
-  background: red;
 `;
 
 export const BackImage = styled(CouponImage)`
   transform: rotateY(180deg);
   z-index: 0;
-  background: blue;
 `;
